@@ -33,7 +33,7 @@ def create_custom_hacker_news(links, subtexts, minimum_score):
     for i in range(len(links)):
         title = links[i].getText()
         href = links[i].get("href", None) # Get the link, else None
-        vote = subtexts.select(".score")
+        vote = subtexts[i].select(".score")
         if len(vote): # Not an empty list
             points = int(vote[0].getText().replace(" points", "")) # Replace the suffix to make the string numeric
             if points >= minimum_score:
