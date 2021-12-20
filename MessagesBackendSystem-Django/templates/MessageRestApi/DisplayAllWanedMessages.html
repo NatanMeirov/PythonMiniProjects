@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Display All Wanted Messages</title>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3">The Wanted Messages of the User:</h1>
+            <hr class="my-2">
+
+                {% if messages_to_display %}
+
+                <ol>
+                    {% for message in messages_to_display %}
+                    <li>Message Info:</li>
+                    <ul>
+                        <li>From: {{ message.sender }}</li>
+                        <li>To: {{ message.receiver }}</li>
+                        <li>Subject: {{ message.subject }}</li>
+                        <li>Message: {{ message.message }}</li>
+                    </ul>
+                    {% endfor %}
+                </ol>
+
+                {% else %}
+
+                <p>Could not find the data about the Messages of the User ...</p>
+                <p>Maybe you already read the Messages, but tried to get only Unread Messages? ...</p>
+
+                {% endif %}
+
+        </div>
+    </div>
+
+
+</body>
+</html>

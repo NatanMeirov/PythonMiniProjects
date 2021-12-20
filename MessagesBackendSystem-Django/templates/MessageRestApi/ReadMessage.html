@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Read Message</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3">Read a Message:</h1>
+            <hr class="my-2">
+            <!-- Note: Using a POST request instead of GET request, because of the Sensitive Data, that SHOULD NOT pass in the URL!-->
+            <form method="POST">
+                {{ read_message_form.as_p }}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-primary" value="Read Message">
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>

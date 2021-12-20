@@ -1,0 +1,46 @@
+<!-- Index - How To Use The System -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Index - How To Use The API</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3"><strong>How To Use The API:</strong></h1>
+            <hr class="my-2">
+            <ul>
+                <li><h2>To Add New User, please head to: Homepage/</h2></li>
+                <li><h2>To Write new Message, please head to: WriteMessage/</h2></li>
+                <li><h2>To Read a Message, please head to: ReadMessage/</h2></li>
+                <li><h2>To Get Messages for a Specific User (All or Unread), please head to: GetMessages/</h2></li>
+                <li><h2>To Delete a Message, please head to: DeleteMessage/</h2></li>
+                <li><h2>To see this Index Page again later, please return to: Index/</h2></li>
+            </ul>
+            <hr class="my-2">
+            <hr class="my-2">
+            <hr class="my-2">
+            <h5><em>Some Notes about the API:</em></h5>
+            <ul>
+                <li>Every Message in the data base of the system do not have an indication who is the owner of the message, but the sender and the receiver. It can cause a problem while a User tries to delete a message (as a sender or as a receiver) - bacause it will automaticly delete the message from the system, no matter that there is another User in the system with the same message (as a receiver or as a sender). </li>
+                <li>The problem above could be solved easily with more time, and another Model.Field - that will give indication who is the OWNER of the message, and then create a DUPLICATE of that message in the system, while in the first message - the owner is the sender, and in the other message - the owner is the receiver. This solution will take some time that I do not have right now...</li>
+                <li>Another thing, is that the system CAN NOT handle a situation that a User send or receive a message with the same subject... It will cause a CONFLICT, so please - DON'T TRY IT!</li>
+                <li>Debug turned Off (settings.py: DEBUG = False)</li>
+            </ul>
+            <hr class="my-2">
+            <h6><em>Final Words:</em></h6>
+            <ul>
+                <li><strong>Thank you. I hope you will find this API good enough to see my knowledge in Django - The Great Web Framework For Python Language.</strong></li>
+                <li><strong>Date: 27.11.2019</strong></li>
+                <li><strong>Natan Meirov, 054-4482549</strong></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
